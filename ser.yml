@@ -1,0 +1,14 @@
+---
+ - name: start the service
+   hosts: all
+   tasks: 
+     - name: start multiple services
+       service: name={{item}} state=started
+       loop:
+         - httpd
+         - vsftpd
+         - finger
+ ...        
+         
+       
+       
