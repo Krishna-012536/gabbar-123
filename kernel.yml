@@ -1,0 +1,7 @@
+---
+ - name: check the kernel version
+   hosts: all
+   tasks:
+     - name: check kernel and fs info
+       shell: df -h;uname -r
+...
