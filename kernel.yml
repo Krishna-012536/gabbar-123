@@ -4,4 +4,6 @@
    tasks:
      - name: check kernel and fs info
        shell: df -h;uname -r
+       register: output1
+     - debug: msg="{{output1}}"
 ...
