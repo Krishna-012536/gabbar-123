@@ -6,4 +6,7 @@
        shell: df -h;uname -r
        register: output1
      - debug: msg="{{output1}}"
+     - yum:
+         name: httpd
+         state: present
 ...
